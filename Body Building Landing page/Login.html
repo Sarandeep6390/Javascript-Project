@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Signup Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./Login.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOMMy3uYdkXxNHqPqVsYFQ98qF56KQn6A4Z+3Wc" crossorigin="anonymous" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-box" id="login-form">
+                <h2>Login</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <label for="login-email">Email</label>
+                        <input type="email" id="login-email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required>
+                    </div>
+                    <button type="submit">Login</button>
+                    <button type="button" class="home-button" onclick="goHome()">Go to Home</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleForm()">Sign up</a></p>
+                   
+                </form>
+            </div>
+            <div class="form-box hidden" id="signup-form">
+                <h2>Signup</h2>
+                <form>
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required>
+                    </div>
+                    <div class="input-group">
+                        <i class="fas fa-lock"></i>
+                        <label for="signup-confirm">Confirm Password</label>
+                        <input type="password" id="signup-confirm" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                    <button type="button" class="home-button" onclick="goHome()">Go to Home</button>
+                    <p>Already have an account? <a href="#" onclick="toggleForm()">Login</a></p>
+                    
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            loginForm.classList.toggle('hidden');
+            signupForm.classList.toggle('hidden');
+        }
+
+        function goHome() {
+            window.location.href = 'index.html'; // Change this to your homepage URL
+        }
+    </script>
+</body>
+</html>
+
+
+    <script>
+        function toggleForm() {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            loginForm.classList.toggle('hidden');
+            signupForm.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
